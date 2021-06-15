@@ -94,11 +94,6 @@ public class HojadeTrabajo2 extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public void actualizarPantalla() {
-        JPanel temp = new JPanel();
-        this.add(temp);
-    }
-
     @Override
     public void actionPerformed(ActionEvent ae) {
         int op = 0;
