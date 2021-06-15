@@ -35,7 +35,7 @@ class Login extends JFrame implements ActionListener{
             
             setLocation(anchoPantalla/4, alturaPantalla/4);
                     
-        setTitle("Proyecto de IPC");
+        setTitle("Hoja de Trabajo de IPC");
         //Icono
         Image miIcono = mipantalla.getImage("build/classes/ipc1/proyecto1_201900597/principal.jpg");
         
@@ -94,7 +94,7 @@ class Login extends JFrame implements ActionListener{
         if(e.getSource() == loginBoton){
             Usuarios registro = this.user.verCredenciales(this.loginUsuario.getText(), this.loginContraseña.getText());
         if(registro == null){
-            JOptionPane.showMessageDialog(this, "El usuario o la contraseña son invalidos o no existen");
+            JOptionPane.showMessageDialog(this, "ERROR: No se pudo iniciar sesion");
         }else{
             this.setVisible(false);
             new HojadeTrabajo2();
