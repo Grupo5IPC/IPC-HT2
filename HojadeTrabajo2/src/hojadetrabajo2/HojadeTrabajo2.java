@@ -5,13 +5,14 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- *
  * @author alexi
  */
 public class HojadeTrabajo2 extends JFrame implements ActionListener {
-
+    public double primernumero;
+    public double segundonumero;
+    public String operador;
     public JTextField CuadroText = new JTextField();
-    ;
+
     public JButton suma = new JButton("+");
     public JButton resta = new JButton("-");
     public JButton multiplicacion = new JButton("*");
@@ -100,43 +101,57 @@ public class HojadeTrabajo2 extends JFrame implements ActionListener {
         if (ae.getSource() == suma) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "+");
-        }if (ae.getSource() == resta) {
+            primernumero = Double.parseDouble(temp);
+        }
+        if (ae.getSource() == resta) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "-");
-        }if (ae.getSource() == multiplicacion) {
+        }
+        if (ae.getSource() == multiplicacion) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "*");
-        }if (ae.getSource() == division) {
+        }
+        if (ae.getSource() == division) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "/");
-        }if (ae.getSource() == uno) {
+        }
+        if (ae.getSource() == uno) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "1");
-        }if (ae.getSource() == dos) {
+        }
+        if (ae.getSource() == dos) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "2");
-        }if (ae.getSource() == tres) {
+        }
+        if (ae.getSource() == tres) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "3");
-        }if (ae.getSource() == cuatro) {
+        }
+        if (ae.getSource() == cuatro) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "4");
-        }if (ae.getSource() == cinco) {
+        }
+        if (ae.getSource() == cinco) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "5");
-        }if (ae.getSource() == seis) {
+        }
+        if (ae.getSource() == seis) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "6");
-        }if (ae.getSource() == siete) {
+        }
+        if (ae.getSource() == siete) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "7");
-        }if (ae.getSource() == ocho) {
+        }
+        if (ae.getSource() == ocho) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "8");
-        }if (ae.getSource() == nueve) {
+        }
+        if (ae.getSource() == nueve) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "9");
-        }if (ae.getSource() == cero) {
+        }
+        if (ae.getSource() == cero) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "0");
         }
