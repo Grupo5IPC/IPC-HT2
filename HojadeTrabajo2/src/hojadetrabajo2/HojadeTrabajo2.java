@@ -10,8 +10,9 @@ import javax.swing.*;
  */
 public class HojadeTrabajo2 extends JFrame implements ActionListener {
 
+    public static int num1 = 0;
+    public static int operacion = 0;
     public JTextField CuadroText = new JTextField();
-    ;
     public JButton suma = new JButton("+");
     public JButton resta = new JButton("-");
     public JButton multiplicacion = new JButton("*");
@@ -94,12 +95,28 @@ public class HojadeTrabajo2 extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
+    public int opSuma() {
+        String[] temp = CuadroText.getText().split("\\+");
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i] != null) {
+                num1 = Integer.parseInt(temp[i]);
+                operacion += num1;
+                System.out.println(operacion);
+                System.out.println(num1);
+            }
+        }
+        return operacion;
+    }
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-        int op = 0;
         if (ae.getSource() == suma) {
-            String temp = CuadroText.getText();
-            CuadroText.setText(temp + "+");
+            opSuma();
+            int aux = num1;
+            CuadroText.setText(aux + "+");
+            
+        }if (ae.getSource() == resultado) {
+            CuadroText.setText(String.valueOf(operacion));
         }if (ae.getSource() == resta) {
             String temp = CuadroText.getText();
             CuadroText.setText(temp + "-");
